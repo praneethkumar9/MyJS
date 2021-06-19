@@ -1,0 +1,16 @@
+Mathematical calcution
+
+
+let n = 7 , k =2
+
+
+we need to split to n into  nearest highest power of k plus something
+
+
+n = power(2,2) + 3
+
+n = power(k,a) + l
+
+then ans is 2a + l 
+
+so now ans for 7,2 is 2(2) + 3 = 7

@@ -1,0 +1,28 @@
+reactive resume
+
+
+>searching:
+binary search
+linear search
+
+>quick-sort
+buble
+count
+insertion
+merge
+quick
+
+Data structure
+stack
+ left-ended
+ right-ended
+
+[below top 4]
+queue
+
+linked list
+
+graph
+
+trees
+Binary Search Tree

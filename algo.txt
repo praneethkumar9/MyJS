@@ -1,0 +1,6 @@
+dutch flag algorithm
+Quick select 
+Josephus 
+merge sort
+quick sort
+triplets
