@@ -12,6 +12,7 @@ insertion
 merge
 quick
 
+
 Data structure
 stack
  left-ended
