@@ -1,3 +1,93 @@
+# Scope
+
+### Scope determines the accessibility (visibility) of variables.
+
+JavaScript has 3 types of scope:
+
+- Block scope
+- Function or local scope
+- Global scope
+
+## Block Scope
+  Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+  ES6 introduced two important new JavaScript keywords: let and const.
+
+  These two keywords provide Block Scope in JavaScript.
+
+  Variables declared inside a { } block cannot be accessed from outside the block:
+
+Example
+```javascript
+{
+  let x = 2;
+}
+// x can NOT be used here
+```
+Variables declared with the var keyword can NOT have block scope.
+
+Variables declared inside a { } block can be accessed from outside the block.
+
+Example
+```javascript
+{
+  var x = 2;
+}
+// x CAN be used here
+```
+## Local Scope
+Variables declared within a JavaScript function, become LOCAL to the function.
+
+Example
+```javascript
+// code here can NOT use carName
+
+function myFunction() {
+  let carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName
+```
+Local variables have Function Scope:
+
+They can only be accessed from within the function.
+
+Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+
+Local variables are created when a function starts, and deleted when the function is completed.
+
+local scope can also called as function scope whose ends function complete its execution
+
+***Variables declared with var, let and const are quite similar when declared inside a function but its accessing its value will differ***
+## Global Scope
+Variables declared Globally (outside any function) have Global Scope.
+
+Global variables can be accessed from anywhere in a JavaScript program.
+
+Variables declared with var, let and const are quite similar when declared outside a block. 
+
+***Only the difference is Global variables defined with the var keyword belong to the global (window )object whereas let & const wont belongs to global object***
+
+They all have Global Scope:
+```javascript
+var x = 2;       // Global scope
+let x = 2;       // Global scope
+const x = 2;       // Global scope
+```
+JavaScript Variables
+In JavaScript, objects and functions are also variables.
+
+## Automatically Global
+If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+var is scope depends on its context .
+ - for declared outside the function - global scope
+- for declared in inside the function will have local or function scope
+in function , var variable declared but not used then no memory for it 
+
+
+--------------------------------------------------------------------------------
 # Closures
   Closures is a function bundled with its lexical environment  . 
   In other words , closures will be part of any function  which is function bundled with its parent lexical enviroment
