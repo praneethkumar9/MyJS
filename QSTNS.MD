@@ -1857,6 +1857,22 @@ Explain how JSONP works (and how it’s not really Ajax).
                     return this.name 
                 }
             }
+	    
+# Can we declare variable twice with same name ?
+   Yes , using var declartion , we can declare 
+
+   ```javascript
+        var carName = "Volvo";
+        var carName;
+   ```
+   You cannot re-declare a variable declared with let or const.
+
+    This will not work:
+    
+    ```javascript
+        let carName = "Volvo";
+        let carName;
+    ```
 # Output of null == undefined ?
    It will be true because as type coercion happens , both will be converted to boolean type
    
@@ -1879,6 +1895,8 @@ Explain how JSONP works (and how it’s not really Ajax).
 		},1000)  
 	}
 ```
+Ans
+```javascript
   for(var i=0;i<3;i++){
     (function (a){
     	setTimeout(function(){
@@ -1887,3 +1905,4 @@ Explain how JSONP works (and how it’s not really Ajax).
     }
     )(i)
    }
+  ```
