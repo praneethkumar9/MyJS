@@ -1857,3 +1857,33 @@ Explain how JSONP works (and how it’s not really Ajax).
                     return this.name 
                 }
             }
+# Output of null == undefined ?
+   It will be true because as type coercion happens , both will be converted to boolean type
+   
+# Output of below snippet ?
+   ```javascript
+	for(var i=0;i<3;i++){
+	setTimeout(function(){
+	console.log(i)
+	},1000)
+```
+  This prints 3 3 3 -- As setTimeout run after sometime due to webAPI asynchronous call . By that time i becomes 3 at the end so it prints 3 for each loop since var is a functional scope
+  
+  Important to remember like i will be increatment until condition fails so it increments to 3
+  
+  # Change below snippet using ES5 to print 0 1 2 ?
+   ```javascript
+	for(var i=0;i<3;i++){
+		setTimeout(function(){
+		console.log(i)
+		},1000)  
+	}
+```
+  for(var i=0;i<3;i++){
+    (function (a){
+    	setTimeout(function(){
+		console.log(a)
+	},1000)
+    }
+    )(i)
+   }
