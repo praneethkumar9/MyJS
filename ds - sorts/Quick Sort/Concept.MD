@@ -35,6 +35,10 @@ Quick sort is sorting algorithm uses divide & conquer startegy
 
     Also, when it comes to space complexity, Quicksort doesn't take any extra space (excluding the space reserved for recursive calls). These kinds of algorithms are technically called as in-place algorithms. We don't need extra space because we are performing the operation on the same array
 
+ # MyNote: 
+    Pindex is something which always point to index where value is greater than pivot value
+    Once its found any smaller value in the array iteration its swaps with Pindex and increments Pindex . 
+    So that all small values will be pushed to left & big values to right
     
 # References :- 
   * https://www.youtube.com/watch?v=COk73cpQbFQ
