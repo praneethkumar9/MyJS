@@ -4,3 +4,11 @@ Josephus
 merge sort
 quick sort
 triplets
+Kadane's algorithm
+brute force algorithm
+
+
+greedy approach -
+     here every steps is choosen greedly 
+Brute force - 
+     A brute force approach is an approach that finds all the possible solutions to find a satisfactory solution to a given problem. The brute force algorithm tries out all the possibilities till a satisfactory solution is not found

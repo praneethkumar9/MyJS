@@ -1,3 +1,5 @@
+
+# Dutch flag algorithm
 1. Take intial values of low , mid , high as below
          low= 0 , mid=0 ,high= arrayLength-1
 2. Iterate until mid becomes greater than high
