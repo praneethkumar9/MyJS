@@ -1906,3 +1906,39 @@ Ans
     )(i)
    }
   ```
+
+# What is method chaining ?
+    Method chaining is the mechanism of calling a method on another method of the same object. This ensures a cleaner and readable code. Method chaining uses this keyword in the object's class to access its methods. In javascript, the this keyword refers to the current object in which it is called. When a method returns this, it simply returns an instance of the object in which it is returned. in another word, to chain methods together, we need to make sure that each method we define has a return value so that we can call another method on it.
+
+    ```javascript
+ class Arithmetic {
+  constructor() {
+    this.value = 0;
+  }
+  sum(...args) {
+    this.value = args.reduce((sum, current) => sum + current, 0);
+    return this;
+  }
+  addition(value) {
+    this.value = this.value + value;
+    return this;
+  }
+  subtraction(value) {
+    this.value = this.value - value;
+    return this;
+  }
+  average(...args) {
+    this.value = args.length? (this.sum(...args).value) / 
+  args.length: undefined;
+    return this;
+  }
+}
+
+
+const Arithmetic 1= new Arithmetic()
+Arithmetic1
+  .sum(1, 3, 6)   // => { value: 10 } 
+  .subtract(3)   // => { value: 7 }
+  .add(4)        // => { value: 11 }
+  .value         // => 11 
+  ```
