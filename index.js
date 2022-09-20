@@ -44,20 +44,52 @@
 // });
 // console.log('Message no. 5: Sync')
 
-function init() {
-   debugger;
-   var name = 'Mozilla'; // name is a local variable created by init
-   function displayName() {
-      let name = "dff"
-      debugger;
-     // displayName() is the inner function, a closure
-     console.log(name); // use variable declared in the parent function
-   }
-   return displayName;
- }
- const dis = init();
+// function init() {
+//    debugger;
+//    var name = 'Mozilla'; // name is a local variable created by init
+//    function displayName() {
+//       let name = "dff"
+//       debugger;
+//      // displayName() is the inner function, a closure
+//      console.log(name); // use variable declared in the parent function
+//    }
+//    return displayName;
+//  }
+//  const dis = init();
  
  
- // 100 line
+//  // 100 line
  
- dis();
+//  dis();
+
+
+
+let a = ['dogs','cats','cat','cats','and','sand','dog'];
+
+let str = 'dogsandcat';
+let output = []
+
+while(str!=''){
+  debugger;
+console.log('aa') 
+ let word ='';  
+ /* str = ""; */
+/* for(let i =0;i<str.length;i++){    
+ word+=str[i];   
+ console.log(word)   
+ if(a.includes(word)){   
+     console.log(str);        
+     str = str.slice(0,word.length); 
+     console.log(str);    
+     output.push(word);    
+     break   
+ }  
+ } */
+} 
+
+/* while(string!=''){
+console.log('aa')    let word ='';  for(let i =0;i<string.length;i++){        word+=string[i];    console.log(word)    if(a.includes[word]){      console.log(string);        string = string.slice(0,word.length);      console.log(string);      output.push(word);      break    }  }
+} */
+
+console.log(output)
+
