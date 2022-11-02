@@ -1,0 +1,37 @@
+<!-- LINK Both  JS and CSS files -->
+<!-- Place below code in html body-->
+<!-- Modifiy shadowRoot to document query selector -->
+<html>
+<head>
+</head>
+<body>
+<div class="crsl-ctn">
+        <div class="shadow-ctn left" id="leftOverlay"></div>
+        <div class="crsl-track">
+            <div class="crsl-img-ctn">
+                <img src="<!--add image path -->" alt="poi images" class="crsl-img">
+            </div>
+            <div class="crsl-img-ctn v-divider"></div>
+			<div class="crsl-img-ctn">
+                <img src="<!--add image path -->" alt="poi images" class="crsl-img">
+            </div>
+            <div class="crsl-img-ctn v-divider"></div>`
+			<div class="crsl-img-ctn">
+                <img src="<!--add image path -->" alt="poi images" class="crsl-img">
+            </div>
+            <div class="crsl-img-ctn v-divider"></div>`
+			<div class="crsl-img-ctn">
+                <img src="<!--add image path -->" alt="poi images" class="crsl-img">
+            </div>
+            <div class="crsl-img-ctn v-divider"></div>`
+        </div>
+        <div class="shadow-ctn right" id="rightOverlay"></div>
+        </div>
+        <div class="crsl-controls">
+        <button slot="bottom" name="arrow-left" size="25px" color="var(--blue)" class="crsl-prev"
+            onclick="prevFunction()" primary>prev</button>
+        <button slot="bottom" name="arrow-right" size="25px" color="var(--blue)" class="crsl-next"
+            onclick="this.nextFunction()" primary>next</button>
+        </div>
+</body>
+</html>

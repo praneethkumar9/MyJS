@@ -28,7 +28,6 @@
 //   },1000)
 // }
 
- debugger
 // console.log('Message no. 1: Sync');
 // setTimeout(function() {
 //    console.log('Message no. 2: setTimeout');
@@ -62,7 +61,11 @@
  
 //  dis();
 
-
+var f = 1;
+debugger
+delete f;
+console.log(f)
+debugger
 
 let a = ['dogs','cats','cat','cats','and','sand','dog'];
 

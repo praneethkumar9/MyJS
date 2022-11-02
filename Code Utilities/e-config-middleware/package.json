@@ -1,0 +1,22 @@
+{
+  "name": "e-config-middleware",
+  "version": "2.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@scmgr.eams.ericsson.net:node/e-config-middleware.git"
+  },
+  "publishConfig": {
+    "registry": "https://tools.nrws.ericsson.net/sinopia"
+  },
+  "author": "Paul Lamb",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "yamljs": "^0.2.10",
+    "mysql": "^2.15.0",
+    "mongodb": "^2.2.31"
+  },
+  "devDependencies": {}
+}

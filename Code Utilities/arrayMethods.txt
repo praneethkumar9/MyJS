@@ -1,0 +1,14 @@
+parseFloat
+includes
+parseInt
+Object.entries()
+Object.keys()
+Object.values()
+Array.entries()
+filter()
+split()
+indexOf()
+match()
+hasOwnProperty('key')
+toString()
+toFixed()

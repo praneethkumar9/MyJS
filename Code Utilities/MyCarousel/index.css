@@ -1,0 +1,87 @@
+/* Carousel main container */
+.root{
+	--blue : blue;
+}
+.crsl-ctn {
+  position: relative;
+  width: 570px;
+  height: 210px;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Carousel css for  single image */
+.crsl-img-ctn {
+  padding-top: 25px;
+}
+
+/* Carousel image container */
+.crsl-track {
+  display: flex;
+  height: 150px;
+  transition: all 0.5s ease-in-out;
+}
+
+.crsl-img {
+  height: 150px;
+  min-width: 150px;
+  object-fit: contain;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Carousel center image  to scale(1.2) defualt */
+.crsl-img-ctn:nth-child(1) .crsl-img {
+  height: 150px;
+  min-width: 150px;
+  object-fit: contain;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.2);
+}
+
+/* no divider to last element*/
+.v-divider:not(:last-child) {
+  border-left: 2px solid lightgrey;
+  margin-right: 30px;
+  margin-left: 30px;
+  height: 230px;
+}
+
+/* white overlay on next and pre image*/
+.shadow-ctn {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-53%);
+  width: 150px;
+  height: 152px;
+
+}
+
+.shadow-ctn.left {
+  left: 0px;
+
+}
+
+.shadow-ctn.right {
+  right: 0px;
+
+}
+
+.overlayLeft {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.9))
+}
+
+.overlayRight {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.9))
+}
+
+/* css for <- and -> controls*/
+.crsl-controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.crsl-prev,
+.crsl-next {
+  cursor: pointer;
+}
