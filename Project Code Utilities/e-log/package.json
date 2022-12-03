@@ -1,0 +1,22 @@
+{
+  "name": "e-log",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://naopsgit.exu.ericsson.se/node/modules/ana-dev/e-log.git"
+  },
+  "publishConfig": {
+    "registry": "https://tools.nrws.ericsson.net/sinopia/"
+  },
+  "author": "Esari praneeth kumar",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "bunyan-express-serializer": "^1.0.0",
+    "e-config-middleware": "^2.0.0"
+  },
+  "devDependencies": {}
+}
