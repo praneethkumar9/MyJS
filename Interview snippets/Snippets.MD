@@ -154,7 +154,7 @@ var display = function () {
   console.log(number);
   var number = 20;
 };
-display();
+display();  
 ```
 
 It is undefined due to hoisting

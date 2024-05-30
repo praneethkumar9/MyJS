@@ -18,35 +18,35 @@ function Calculator(str) {
     
             let i;
             
-            let values = [];
+            let values = [];  // operands
             
-            let ops = [];
+            let ops = []; // operators
             
+            // This block of code is for pushing operands & operators to above arrays by scanning through string
             for(i = 0; i < str.length; i++){
                 
                 if(str[i] == ' ')
                     continue;
                 else if(str[i] == '('){
-                    ops.push(str[i]);
+                    ops.push(str[i]);  
+                    // this is used to stop iteration in the logic where we encounter ")"  so that inside paranthesis all are calculated first as priority
                 }
-                else if(!isNaN(str[i])){
+                else if(!isNaN(str[i])){ // for digits
                     let val = 0;
-                    
-                    
-                    while(i < str.length && 
+                    // Converting the string to number 
+                    while(i < str.length && str[i] != ' ' &&
                                 !isNaN(str[i]))
                     {
-                        val = (val*10) + (str[i]-'0');
+                        val = (val*10) + (str[i]-'0'); // convert string number to perfect number type
                         i++;
                     }
                     
-                    values.push(val);
-                    
-                    
+                    values.push(val);                  
                     i--;
                 }
                 else if(str[i] == ')')
                 {
+                    // run this iteration until all we encounter "(" so that inside paranthesis , arthmetical operation performed
                     while(!(ops.length==0) && ops[ops.length-1] != '(')
                     {
                         let val2 = values[values.length-1];
@@ -59,17 +59,18 @@ function Calculator(str) {
                         ops.pop();
                         
                         values.push(applyOp(val1, val2, op));
-                    }
+                    } 
                     
                     if(!(ops.length==0))
                     ops.pop();
                 }
                 
-                else
+                else  // For operators
                 {
         
+                    // run this when we have high perecendene operator than the current operator precendence
                     while(!(ops.length==0) && precedence(ops[ops.length-1])
-                                        >= precedence(str[i])){
+                                        >= precedence(str[i])){  
                         let val2 = values[values.length-1];
                         values.pop();
                         
@@ -103,3 +104,8 @@ function Calculator(str) {
             return values[values.length-1];
     
     }
+
+
+// This uses Shunting-yard algorithm
+
+

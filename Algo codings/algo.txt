@@ -8,6 +8,10 @@ Kadane's algorithm
 brute force algorithm
 
 
+
+prime check
+
+
 greedy approach -
      here every steps is choosen greedly 
 Brute force - 
