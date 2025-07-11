@@ -1,0 +1,29 @@
+1) Basic syntax -- variables , data types , loops , keywords
+2) Oops - classes objects function
+3) files- I/0
+4) buit-in function
+5) data structures
+
+
+let const var
+arrow functions
+exports
+classes
+...
+destruct
+primitive       
+array methods                                         Nodejs -- v8 chrome  engine - http module , fs modul
+
+                                                     
+how code works
+hoistinf
+scope chain
+scope
+closures
+setTime
+first class functions
+callback
+event loop
+
+
+

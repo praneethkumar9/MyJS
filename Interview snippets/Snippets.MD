@@ -119,9 +119,9 @@ console.log(twiceNumber(f));
 let f = [1, 2, 2, 3, 4, 1, 2, 3];
 
 const twiceNumber = (input) => {
-  let a = []; //
-  let b = []; //
-  let c = [];
+  let a = []; // this stores prev nmber
+  let b = []; // contains only twice number
+  let c = []; // contains more than twice numbers
   input.forEach((x) => {
     if (!c.includes(x)) {
       if (b.includes(x)) {
@@ -140,6 +140,8 @@ const twiceNumber = (input) => {
 
   return b;
 };
+
+// 
 
 console.log(twiceNumber(f));
 ```
