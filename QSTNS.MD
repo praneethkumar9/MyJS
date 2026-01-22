@@ -2,9 +2,8 @@ prototypes??
 
 Explain how JSONP works (and how it’s not really Ajax).
 
-
 # What is the object type?
-  
+
     The object type refers to a compound value where you can set properties (named locations) that each hold their own values of any type.
     var obj = {
         a: "hello world", // property
@@ -31,7 +30,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     obj["b"];		// 42
 
 # Explain arrays in JavaScript ?
-   
+
     An array is an object that holds values (of any type) not particularly in named properties/keys, but rather in numerically indexed positions:
     var arr = [
         "hello world",
@@ -46,7 +45,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     typeof arr;		// "object"
 
-# What is typeof operator?  
+# What is typeof operator?
 
     JavaScript provides a typeof operator that can examine a value and tell you what type it is:
     var a;
@@ -68,7 +67,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     typeof a;				// "undefined"
 
     a = { b: "c" };
-    typeof a;	
+    typeof a;
 
 # Explain equality in JavaScript ?
 
@@ -85,7 +84,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     If either value in a comparison could be of these specific values (0, "", or [] -- empty array), avoid == and use ===.
     In all other cases, you're safe to use ==. Not only is it safe, but in many cases it simplifies your code in a way that improves readability.
 
-# What is Coercion in JavaScript? 
+# What is Coercion in JavaScript?
 
     Type coercion is the process of converting value from one type to another (such as string to number, object to boolean, and so on). Any type, be it primitive or an object, is a valid subject for type coercion. To recall, primitives are: number, string, boolean, null, undefined + Symbol (added in ES6).
 
@@ -96,13 +95,13 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # Explain Values and Types in JavaScript ?
 
-   JavaScript has typed values, not typed variables. The following built-in types are available:
-        string
-        number
-        boolean
-        null and undefined
-        object
-        symbol (new to ES6)
+JavaScript has typed values, not typed variables. The following built-in types are available:
+string
+number
+boolean
+null and undefined
+object
+symbol (new to ES6)
 
 # What is let keyword in JavaScript?
 
@@ -110,9 +109,9 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # Explain the same-origin policy with regards to JavaScript. ?
 
-  The same-origin policy prevents JavaScript from making requests across domain boundaries. An origin is defined as a combination of URI scheme, hostname, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.
+The same-origin policy prevents JavaScript from making requests across domain boundaries. An origin is defined as a combination of URI scheme, hostname, and port number. This policy prevents a malicious script on one page from obtaining access to sensitive data on another web page through that page's Document Object Model.
 
-# What is the difference between == and ===? 
+# What is the difference between == and ===?
 
     == is the abstract equality operator while === is the strict equality operator. The == operator will compare for equality after doing any necessary type conversions. The === operator will not do type conversion, so if two values are not the same type === will simply return false. When using ==, funky things can happen, such as:
     1 == '1'; // true
@@ -126,7 +125,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     console.log(a == null); // true
     console.log(a == undefined); // true
 
-# Is there anyway to force using strict mode in Node.js? 
+# Is there anyway to force using strict mode in Node.js?
 
     you can place
     "use strict";
@@ -135,7 +134,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     node --use_strict
 
-# Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?  
+# Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 
     The load event fires at the end of the document loading process. At this point, all of the objects in the document are in the DOM, and all the images, scripts, links and sub-frames have finished loading.
 
@@ -143,13 +142,13 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # What is strict mode ?
 
-    Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a "strict" operating context. This strict context prevents certain actions from being taken and throws more exceptions. 
-    
-    Simply it will throw even for potential errors also and when we use this mode it will be applied near to its scope just like below 
+    Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a "strict" operating context. This strict context prevents certain actions from being taken and throws more exceptions.
+
+    Simply it will throw even for potential errors also and when we use this mode it will be applied near to its scope just like below
 
     ```javascript
         // Non-strict code...
-    
+
         (function(){
         "use strict";
 
@@ -159,13 +158,13 @@ Explain how JSONP works (and how it’s not really Ajax).
         // Non-strict code...  `
     ```
 
-# What's the difference between Host objects and Native objects?  
+# What's the difference between Host objects and Native objects?
 
      Native objects are objects that are part of the JavaScript language defined by the ECMAScript specification, such as String, Math, RegExp, Object, Function, etc.
 
      Host objects are provided by the runtime environment (browser or Node), such as window, XMLHTTPRequest, etc.
 
-# What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?  
+# What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 
     Some examples of languages that compile to JavaScript include CoffeeScript, Elm, ClojureScript, PureScript, and TypeScript.
 
@@ -184,7 +183,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     * IDE/editor support might be lacking.
     * These languages will always be behind the latest JavaScript standard.
     * Developers should be cognizant of what their code is being compiled to — because that is what would actually be running, and that is what matters in the end.
-    
+
     Practically, ES2015 has vastly improved JavaScript and made it much nicer to write. I don't really see the need for CoffeeScript these days.
 
 # Explain event bubbling and how one may prevent it ?
@@ -193,11 +192,11 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     One way to prevent event bubbling is using event.stopPropagation() or event.cancelBubble on IE < 9.
 
-    or 
+    or
 
     Event bubbling is a type of event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object
 
-# Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?  
+# Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 
     Every script has access to the global scope, and if everyone uses the global namespace to define their variables, collisions will likely occur. Use the module pattern (IIFEs) to encapsulate your variables within a local namespace.
 
@@ -208,7 +207,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     Polyfills are not part of the HTML5 standard
     Polyfilling is not limited to Javascript
 
-# Explain Null and Undefined  and undeclared in JavaScript ?
+# Explain Null and Undefined and undeclared in JavaScript ?
 
     JavaScript (and by extension TypeScript) has two bottom types: null and undefined. They are intended to mean different things:
 
@@ -217,11 +216,11 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using var or const keyword.
 
-# What's the difference between throw Error('msg') vs throw new Error('msg')? 
-  
+# What's the difference between throw Error('msg') vs throw new Error('msg')?
+
     Both are fine; the function call Error(…) is equivalent to the object creation expression new Error(…) with the same arguments.
 
-# What is IIFEs (Immediately Invoked Function Expressions)? 
+# What is IIFEs (Immediately Invoked Function Expressions)?
 
     An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
 
@@ -229,7 +228,7 @@ Explain how JSONP works (and how it’s not really Ajax).
             statements
         })();
 
-    It is a design pattern which is also known as a Self-Executing Anonymous Function 
+    It is a design pattern which is also known as a Self-Executing Anonymous Function
 
 # What is the difference between a shim and a polyfill?
 
@@ -241,7 +240,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     A higher order function is a function that takes a function as an argument, or returns a function. Higher order function is in contrast to first order functions, which don’t take a function as an argument or return a function as output.
 
-# What do you think of AMD vs CommonJS?  
+# What do you think of AMD vs CommonJS?
 
     AMD and CommonJS are both Javascript module loader. They accomplish the same task but works different.
 
@@ -284,7 +283,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     All are the function methods .
 
-    call method will be used 
+    call method will be used
     to call the function with  object or the function for which "this" keyword should refer
     along with the arguments one by one
 
@@ -313,16 +312,16 @@ Explain how JSONP works (and how it’s not really Ajax).
     The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it, existing properties from being removed, prevents changing the enumerability, configurability, or writability of existing properties, and prevents the values of existing properties from being changed. In addition, freezing an object also prevents its prototype from being changed. freeze() returns the same object that was passed in.
 
 # Explain closures in JS ?
- 
-    Closures is a function bundled with its lexical environment  . 
+
+    Closures is a function bundled with its lexical environment  .
     In other words , closures will be part of any function  which is function bundled with its parent lexical enviroment
 
-    MDN definition :-  A closure gives access to the outer function's scope from an inner function . They are   created every time a function created 
+    MDN definition :-  A closure gives access to the outer function's scope from an inner function . They are   created every time a function created
 
 # Difference between ES5 and ES6
 
-    Both are the ECMA specifications to standardize the javacript . but ES6 has many enchancements 
-    * arrow function , spread operator , for of ... loops 
+    Both are the ECMA specifications to standardize the javacript . but ES6 has many enchancements
+    * arrow function , spread operator , for of ... loops
     * new type symbol
     * performance enchanced
     * introduced let & const
@@ -362,7 +361,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     You can access all the symbols assigned to an object using the Object.getOwnPropertySymbols() method.
 
-# When should we use generators in ES6?  
+# When should we use generators in ES6?
 
     With ES6, we were given a new tool: generators. In a normal function, there is only one entry point: the invocation of the function itself. A generator allows you to pause the execution of a function and resume it later. Generators are useful when dealing with iterators and can simplify the asynchronous nature of Javascript.
 
@@ -414,7 +413,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # Differences between arrow functions vs normal functions ?
 
-    arrow function doesnt have its own bindings to this & super 
+    arrow function doesnt have its own bindings to this & super
     Cant used as constructors
     Not suitable for call , apply & bind
     we can have leaner code than with normal functions
@@ -426,11 +425,11 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # When should I use Arrow Functions in ES6 ?
 
-   Mainly to solve this keyword issues
-    see this link
-    https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/
-    https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/
-    https://www.javascripttutorial.net/es6/when-you-should-not-use-arrow-functions/
+Mainly to solve this keyword issues
+see this link
+https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/
+https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/
+https://www.javascripttutorial.net/es6/when-you-should-not-use-arrow-functions/
 
 # Explain the difference between undefined and not defined in JavaScript
 
@@ -455,7 +454,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     mistakes : -
 
         1) creating a variable without let,cont,variable
-        2) deleting a variable using ("delete x" ) 
+        2) deleting a variable using ("delete x" )
         3) assigning the value to non writable property or read only property mean only getter method
         4) redeclaring varible with same name with var
         5) same function parameter names
@@ -469,16 +468,16 @@ Explain how JSONP works (and how it’s not really Ajax).
     Ex:-  normal function : log(date,type,message);
           curried function : log(date)(type)(message);
 
-        Now if we want log the message only for current date . 
+        Now if we want log the message only for current date .
         with normal function we need to pass current date evrytime .
         with curried function we can do it easily like below
-         
+
          let currentLog = log(currentDate);
          currentLog("info","first log");
          currentLog("info","second log");
 
 # Differentiate between ES6 class and ES5 function constructors. ?
-  
+
     ES5 Function constructors work and look the same but the main difference is observed when the developer uses the Inheritance property.
 
     we have to use prototype every time we want to add a new property to our object. Now in ES5, there is no extends that can extend all your the properties, no constructor for initialization or super to call the constructor of the base class.
@@ -493,12 +492,12 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     Object. freeze() prevents modification or extension to the existing value of an object. ... const makes the variable binding immutable but it's value can still be modified.
 
-#  How to compare two objects in JavaScript?
+# How to compare two objects in JavaScript?
 
     Objects are reference types so you can’t just use === or == to compare 2 objects. One quick way to compare if 2 objects have the same key value, is using JSON.stringify
 
 # What’s a typical use case for anonymous functions?
- 
+
     Since Anonymous Functions are function expressions rather than the regular function declaration which are statements. Function expressions are more flexible. We can assign functions to variables, object properties, pass them as arguments to other functions, and even write a simple one line code enclosed in an anonymous functions.
 
     Another typical example would be an anonymous function used by popular frameworks used as IIFE (Immediate Invoked Function Expression).
@@ -534,16 +533,16 @@ Explain how JSONP works (and how it’s not really Ajax).
     It was important to maintain unique object keys to prevent the overwriting of values having similar object key as this could result in loss of data. The introduction of Symbol helped overcome this problem as unique keys could be generated without writing a complicated piece of code
 
 # Why is extending built-in JavaScript objects not a good idea?
-    
+
     Modifying the behaviour of current built-in JS objects is not a good practice as it breaks its default functionality and it will break your code using that specific built-in JS object method or property.
 
 # What is the difference between Anonymous and Named functions?
 
-    Named functions are useful for a good debugging experience, while anonymous functions provides context scoping for easier development. 
+    Named functions are useful for a good debugging experience, while anonymous functions provides context scoping for easier development.
 
-    Hoisting is also one difference . 
+    Hoisting is also one difference .
 
-# What is the new keyword in JavaScript? 
+# What is the new keyword in JavaScript?
 
     The new keyword is used in javascript to create a object from a constructor function. The new keyword has to be placed before the constructor function call and will do the following things:
 
@@ -552,7 +551,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     Binds the this keyword to the newly created object and executes the constructor function
     Returns the newly created object
 
-# Explain Prototype Inheritance in JavaScript? 
+# Explain Prototype Inheritance in JavaScript?
 
     Prototypical inheritance allows us to reuse the properties or methods from one JavaScript object to another through a reference pointer function. All JavaScript objects inherit properties and methods from a prototype like Date objects inherit from Date.
 
@@ -596,7 +595,7 @@ Explain how JSONP works (and how it’s not really Ajax).
         sam.bash(lenardo)
 
 # Describe the JS module design pattern ?
-        
+
         The Module Pattern is one of the important patterns in JavaScript. It is a commonly used Design Pattern which is used to wrap a set of variables and functions together in a single scope.
 
         It is used to define objects and specify the variables and the functions that can be accessed from outside the scope of the function. We expose certain properties and function as public and can also restrict the scope of properties and functions within the object itself, making them private. This means that those variables cannot be accessed outside the scope of the function. We can achieve data hiding an abstraction using this pattern in the JavaScript.
@@ -605,7 +604,7 @@ Explain how JSONP works (and how it’s not really Ajax).
         Maintainability: Module Patterns enable better maintainability since all the related code can be encapsulated inside a single logical block. These logically independent blocks are relatively easier to update.
         Reusability: We single unit of code can be reused across the entire application. Functionality enclosed as a module can be reused and we do not need to define the same functions at multiple points.
 
- # Can you describe the main difference between a .forEach loop and a .map() loop and why you would pick one versus the other?
+# Can you describe the main difference between a .forEach loop and a .map() loop and why you would pick one versus the other?
 
       Foreach loop just iterates through all its item in the callback function to execute whereas map function is used to iterate through the item along we should return something back where at end we get new array of same length with returned values
 
@@ -619,7 +618,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     Using ES5 syntax in Node means that the sharing of code between files is done with the 'require' and 'module. exports' statements. A 'module' in Javascript can be thought of as a container that holds related code which can then be exported to another file.
 
-# What are the actual uses of ES6 WeakMap? 
+# What are the actual uses of ES6 WeakMap?
 
     Some use cases that would otherwise cause a memory leak and are enabled by WeakMaps include:
 
@@ -629,20 +628,19 @@ Explain how JSONP works (and how it’s not really Ajax).
     Keeping data about host objects like DOM nodes in the browser.
     Adding a capability to an object from the outside (like the event emitter example in the other answer).
 
-# Explain difference between: function Person(){}, var person = Person(), and var person = new Person()? 
-  
-   When function is called without new , it will give the returned value . if you are not returning anything it will be undefined
+# Explain difference between: function Person(){}, var person = Person(), and var person = new Person()?
 
+When function is called without new , it will give the returned value . if you are not returning anything it will be undefined
 
-   Below things happen when you call a function with new keyword.
+Below things happen when you call a function with new keyword.
 
     JavaScript creates a new empty object. If ‘this’ keyword is used within that function, it refers to the newly created empty object.
     If you’re not explicitly returning any object, JavaScript would return that newly created object.
 
-#  Check if a given string is a isomorphic
+# Check if a given string is a isomorphic
 
     Two strings str1 and str2 are called isomorphic if there is a one to one mapping possible for every character of str1 to every character of str2. And all occurrences of every character in ‘str1’ map to same character in ‘str2’
-    Examples: 
+    Examples:
 
     Input:  str1 = "aab", str2 = "xxy"
     Output: True
@@ -650,7 +648,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     Input:  str1 = "aab", str2 = "xyz"
     Output: False
-    One occurrence of 'a' in str1 has 'x' in str2 and 
+    One occurrence of 'a' in str1 has 'x' in str2 and
     other occurrence of 'a' has 'y'.
 
 # When You Should Not Use Arrow Functions ?
@@ -667,7 +665,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     Temporal dead zone is nothing but span in which variable declared with let & const having block scope got hoisted but cannot access to the time where it it intialized and access.
 
-# What’s the difference between an “attribute” and a “property”? 
+# What’s the difference between an “attribute” and a “property”?
 
     Attributes are defined by HTML. Properties are defined by DOM. Some HTML attributes have 1:1 mapping onto properties. id is one example of such. Some do not (e.g. the value attribute specifies the initial value of an input, but the valueproperty specifies the current value).
 
@@ -677,26 +675,26 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     The module pattern is typically used for namespacing, where you'll have a single instance acting as a store to group related functions and objects
 
-    This is a different use case from what prototyping is good for. They're not really competing with each other; you can quite happily use both together 
+    This is a different use case from what prototyping is good for. They're not really competing with each other; you can quite happily use both together
 
-#  What's the difference between ES6 Map and WeakMap?
+# What's the difference between ES6 Map and WeakMap?
 
     The major difference between Map and WeakMap is, WeakMap holds the references of the key objects weakly. Thus if that object is deleted somewhere in the program, WeakMap will also release the value mapped to that object. This prevents memory leak. This is the reason WeakMap is used to declare private variables
 
-#  What is the difference between the await keyword and the yield keyword?
+# What is the difference between the await keyword and the yield keyword?
 
     The await keyword is only to be used in async function s, while the yield keyword is only to be used in generator function* s.
 
     await will wait until promise resolves whereas yield will wait until next function of generator instance is called
 
-# How to empty an array in JavaScript? 
- 
+# How to empty an array in JavaScript?
+
     1) array = [];
     2) array.length =[]
     3) while (length)
           array.pop()
 
-#  How to check if an object is an array or not? Provide some code
+# How to check if an object is an array or not? Provide some code
 
     In modern browsers you can do:
 
@@ -717,7 +715,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     yes, so that y we can change datatype inbetween also first storing array then boolean value .
 
 # Is redeclaration of variable is possible with var & let & const ?
- 
+
     Its possible only with var not with let & const
 
     var a= 10
@@ -728,19 +726,19 @@ Explain how JSONP works (and how it’s not really Ajax).
     No we cant declare it , it throw syntax error
 
 # What we will get when we assign values again to const variable ?
- 
+
     It gives type error with reason "Assignment to constant variable" .
 
 # What is Block in JS ?
-   
-   Block is group of statement in between the curly braces.
+
+Block is group of statement in between the curly braces.
 
 # What is shadowing in JS ?
 
     Shadowing in js is nothing but we want to access any varible it will refer to its neareast scope variable even same varible exist somewhere outside .
 
     Ex : -
-              var a = 10 
+              var a = 10
               {
                   var a =20
                   console.log(a) // prints 20
@@ -748,7 +746,7 @@ Explain how JSONP works (and how it’s not really Ajax).
             here block scope overrided the global scope by shadowing it.
 
 # Disadvantages of closures ?
-   
+
      Closures will make high memory consumption due to having references for the function and it wont be collected by garbage collector . So it can may lead to memory leaks & freeze the browser
 
 # What is the difference between an expression and a statement in JavaScript?
@@ -831,6 +829,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     Alternatives to this pattern like GraphQL
 
 # What does the following function return?
+
         function greet() {
         return
         {
@@ -886,7 +885,8 @@ Explain how JSONP works (and how it’s not really Ajax).
             Good to hear
             Logical operations do not produce a boolean unless the operand(s) evaluate to a boolean.
 
-#  What does the following code evaluate to?
+# What does the following code evaluate to?
+
             typeof typeof 0
 
     It evaluates to "string".
@@ -895,63 +895,64 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # What are the differences between var, let, const and no keyword statements?
 
- * No keyword
+- No keyword
 
-    When no keyword exists before a variable assignment, it is either assigning a global variable if one does not exist, or reassigns an already declared variable. In non-strict mode, if the variable has not yet been declared, it will assign the variable as a property of the global object (window in browsers). In strict mode, it will throw an error to prevent unwanted global variables from being created.
+  When no keyword exists before a variable assignment, it is either assigning a global variable if one does not exist, or reassigns an already declared variable. In non-strict mode, if the variable has not yet been declared, it will assign the variable as a property of the global object (window in browsers). In strict mode, it will throw an error to prevent unwanted global variables from being created.
 
- * var
+- var
 
-    var was the default statement to declare a variable until ES2015. It creates a function-scoped variable that can be reassigned and redeclared. However, due to its lack of block scoping, it can cause issues if the variable is being reused in a loop that contains an asynchronous callback because the variable will continue to exist outside of the block scope.
+  var was the default statement to declare a variable until ES2015. It creates a function-scoped variable that can be reassigned and redeclared. However, due to its lack of block scoping, it can cause issues if the variable is being reused in a loop that contains an asynchronous callback because the variable will continue to exist outside of the block scope.
 
-    Below, by the time the the setTimeout callback executes, the loop has already finished and the i variable is 10, so all ten callbacks reference the same variable available in the function scope.
+  Below, by the time the the setTimeout callback executes, the loop has already finished and the i variable is 10, so all ten callbacks reference the same variable available in the function scope.
 
-    for (var i = 0; i < 10; i++) {
-    setTimeout(() => {
-        // logs `10` ten times
-        console.log(i)
-    })
-    }
+  for (var i = 0; i < 10; i++) {
+  setTimeout(() => {
+  // logs `10` ten times
+  console.log(i)
+  })
+  }
 
-    /* Solutions with `var` */
-    for (var i = 0; i < 10; i++) {
-    // Passed as an argument will use the value as-is in
-    // that point in time
-    setTimeout(console.log, 0, i)
-    }
+  /_ Solutions with `var` _/
+  for (var i = 0; i < 10; i++) {
+  // Passed as an argument will use the value as-is in
+  // that point in time
+  setTimeout(console.log, 0, i)
+  }
 
-    for (var i = 0; i < 10; i++) {
-    // Create a new function scope that will use the value
-    // as-is in that point in time
-    ;(i => {
-        setTimeout(() => {
-        console.log(i)
-        })
-    })(i)
-    }
- * let
+  for (var i = 0; i < 10; i++) {
+  // Create a new function scope that will use the value
+  // as-is in that point in time
+  ;(i => {
+  setTimeout(() => {
+  console.log(i)
+  })
+  })(i)
+  }
 
-    let was introduced in ES2015 and is the new preferred way to declare variables that will be reassigned later. Trying to redeclare a variable again will throw an error. It is block-scoped so that using it in a loop will keep it scoped to the iteration.
+- let
 
-    for (let i = 0; i < 10; i++) {
-    setTimeout(() => {
-        // logs 0, 1, 2, 3, ...
-        console.log(i)
-    })
-    }
-    const
-    const was introduced in ES2015 and is the new preferred default way to declare all variables if they won't be reassigned later, even for objects that will be mutated (as long as the reference to the object does not change). It is block-scoped and cannot be reassigned.
+  let was introduced in ES2015 and is the new preferred way to declare variables that will be reassigned later. Trying to redeclare a variable again will throw an error. It is block-scoped so that using it in a loop will keep it scoped to the iteration.
 
-    const myObject = {}
-    myObject.prop = "hello!" // No error
-    myObject = "hello" // Error
-    Good to hear
-    All declarations are hoisted to the top of their scope.
+  for (let i = 0; i < 10; i++) {
+  setTimeout(() => {
+  // logs 0, 1, 2, 3, ...
+  console.log(i)
+  })
+  }
+  const
+  const was introduced in ES2015 and is the new preferred default way to declare all variables if they won't be reassigned later, even for objects that will be mutated (as long as the reference to the object does not change). It is block-scoped and cannot be reassigned.
 
-    However, with let and const there is a concept called the temporal dead zone (TDZ). While the declarations are still hoisted, there is a period between entering scope and being declared where they cannot be accessed.
+  const myObject = {}
+  myObject.prop = "hello!" // No error
+  myObject = "hello" // Error
+  Good to hear
+  All declarations are hoisted to the top of their scope.
 
-    Show a common issue with using var and how let can solve it, as well as a solution that keeps var.
+  However, with let and const there is a concept called the temporal dead zone (TDZ). While the declarations are still hoisted, there is a period between entering scope and being declared where they cannot be accessed.
 
-    var should be avoided whenever possible and prefer const as the default declaration statement for all variables unless they will be reassigned later, then use let if so.
+  Show a common issue with using var and how let can solve it, as well as a solution that keeps var.
+
+  var should be avoided whenever possible and prefer const as the default declaration statement for all variables unless they will be reassigned later, then use let if so.
 
 # What is Big O Notation?
 
@@ -961,62 +962,62 @@ Explain how JSONP works (and how it’s not really Ajax).
 
         In these examples, the base time is 1 element = 1ms.
 
-   * O(1)
+- O(1)
 
-        arr[arr.length - 1]
-        1000 elements = 1ms
-        Constant time complexity. No matter how many elements the array has, it will theoretically take (excluding real-world variation) the same amount of time to execute.
+  arr[arr.length - 1]
+  1000 elements = 1ms
+  Constant time complexity. No matter how many elements the array has, it will theoretically take (excluding real-world variation) the same amount of time to execute.
 
-   * O(N)
+- O(N)
 
-        arr.filter(fn)
-        1000 elements = 1000ms
-        Linear time complexity. The execution time will increase linearly with the number of elements the array has. If the array has 1000 elements and the function takes 1ms to execute, 7000 elements will take 7ms to execute. This is because the function must iterate through all elements of the array before returning a result.
+  arr.filter(fn)
+  1000 elements = 1000ms
+  Linear time complexity. The execution time will increase linearly with the number of elements the array has. If the array has 1000 elements and the function takes 1ms to execute, 7000 elements will take 7ms to execute. This is because the function must iterate through all elements of the array before returning a result.
 
-   * O([1, N])
+- O([1, N])
 
-        arr.some(fn)
-        1000 elements = 1ms <= x <= 1000ms
-        The execution time varies depending on the data supplied to the function, it may return very early or very late. The best case here is O(1) and the worst case is O(N).
+  arr.some(fn)
+  1000 elements = 1ms <= x <= 1000ms
+  The execution time varies depending on the data supplied to the function, it may return very early or very late. The best case here is O(1) and the worst case is O(N).
 
-   * O(NlogN)
+- O(NlogN)
 
-        arr.sort(fn)
-        1000 elements ~= 10000ms
-        Browsers usually implement the quicksort algorithm for the sort() method and the average time complexity of quicksort is O(NlgN). This is very efficient for large collections.
+  arr.sort(fn)
+  1000 elements ~= 10000ms
+  Browsers usually implement the quicksort algorithm for the sort() method and the average time complexity of quicksort is O(NlgN). This is very efficient for large collections.
 
-   * O(N^2)
+- O(N^2)
 
-        for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-        // ...
-        }
-        }
-        1000 elements = 1000000ms
-        The execution time rises quadratically with the number of elements. Usually the result of nesting loops.
+  for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+  // ...
+  }
+  }
+  1000 elements = 1000000ms
+  The execution time rises quadratically with the number of elements. Usually the result of nesting loops.
 
-   * O(N!)
-   
-        const permutations = arr => {
-        if (arr.length <= 2) return arr.length === 2 ? [arr, [arr[1], arr[0]]] : arr
-        return arr.reduce(
-        (acc, item, i) =>
-        acc.concat(
-                permutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map(val => [
-                item,
-                ...val
-                ])
-        ),
-        []
-        )
-        }
-        1000 elements = Infinity (practically) ms
-        The execution time rises extremely fast with even just 1 addition to the array.
+- O(N!)
 
-        Good to hear
-        Be wary of nesting loops as execution time increases exponentially.
+  const permutations = arr => {
+  if (arr.length <= 2) return arr.length === 2 ? [arr, [arr[1], arr[0]]] : arr
+  return arr.reduce(
+  (acc, item, i) =>
+  acc.concat(
+  permutations([...arr.slice(0, i), ...arr.slice(i + 1)]).map(val => [
+  item,
+  ...val
+  ])
+  ),
+  []
+  )
+  }
+  1000 elements = Infinity (practically) ms
+  The execution time rises extremely fast with even just 1 addition to the array.
 
-# Arow function 
+  Good to hear
+  Be wary of nesting loops as execution time increases exponentially.
+
+# Arow function
 
     An arrow function doesn’t have its own this value. Instead, it uses the this value of the enclosing lexical scope. An arrow function also doesn’t have the arguments object.
 
@@ -1170,6 +1171,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     const isNaN = x => x !== x
 
 # Create a function pipe that performs left-to-right function composition by returning a function that accepts one argument.
+
         const square = v => v * v
         const double = v => v * 2
         const addOne = v => v + 1
@@ -1224,6 +1226,16 @@ Explain how JSONP works (and how it’s not really Ajax).
 # What is the this keyword and how does it work?
 
     The this keyword is an object that represents the context of an executing function. Regular functions can have their this value changed with the methods call(), apply() and bind(). Arrow functions implicitly bind this so that it refers to the context of its lexical environment, regardless of whether or not its context is set explicitly with call().
+
+
+    In JavaScript the situation is different: this is the context of a function invocation (a.k.a. execution). The language has 4 function invocation types:
+
+    function invocation: alert('Hello World!')
+    method invocation: console.log('Hello World!')
+    constructor invocation: new RegExp('\\d')
+    indirect invocation: alert.call(undefined, 'Hello World!')
+    Each invocation type defines the context in its way, so this behaves differently than the developer expects.
+
 
     Here are some common examples of how this works:
 
@@ -1320,7 +1332,6 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # What is a potential pitfall with using typeof bar === "object" to determine if bar is an object? How can this pitfall be avoided?
 
-
     Although typeof bar === "object" is a reliable way of checking if bar is an object, the surprising gotcha in JavaScript is that null is also considered an object!
 
     Therefore, the following code will, to the surprise of most developers, log true (not false) to the console:
@@ -1354,19 +1365,19 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     Some of the key benefits of strict mode include:
 
-  * Makes debugging easier. 
-         Code errors that would otherwise have been ignored or would have failed silently will now generate errors or throw exceptions, alerting you sooner to problems in your code and directing you more quickly to their source.
-  * Prevents accidental globals. 
-         Without strict mode, assigning a value to an undeclared variable automatically creates a global variable with that name. This is one of the most common errors in JavaScript. In strict mode, attempting to do so throws an error.
-  * Eliminates this coercion.
-         Without strict mode, a reference to a this value of null or undefined is automatically coerced to the global. This can cause many headfakes and pull-out-your-hair kind of bugs. In strict mode, referencing a a this value of null or undefined throws an error.
-  * Disallows duplicate parameter values. 
-        Strict mode throws an error when it detects a duplicate named argument for a function (e.g., function foo(val1, val2, val1){}), thereby catching what is almost certainly a bug in your code that you might otherwise have wasted lots of time tracking down.
-        Note: It used to be (in ECMAScript 5) that strict mode would disallow duplicate property names (e.g. var object = {foo: "bar", foo: "baz"};) but as of ECMAScript 2015 this is no longer the case.
-  * Makes eval() safer. 
-        There are some differences in the way eval() behaves in strict mode and in non-strict mode. Most significantly, in strict mode, variables and functions declared inside of an eval() statement are not created in the containing scope (they are created in the containing scope in non-strict mode, which can also be a common source of problems).
-  * Throws error on invalid usage of delete.
-        The delete operator (used to remove properties from objects) cannot be used on non-configurable properties of the object. Non-strict code will fail silently when an attempt is made to delete a non-configurable property, whereas strict mode will throw an error in such a case.
+- Makes debugging easier.
+  Code errors that would otherwise have been ignored or would have failed silently will now generate errors or throw exceptions, alerting you sooner to problems in your code and directing you more quickly to their source.
+- Prevents accidental globals.
+  Without strict mode, assigning a value to an undeclared variable automatically creates a global variable with that name. This is one of the most common errors in JavaScript. In strict mode, attempting to do so throws an error.
+- Eliminates this coercion.
+  Without strict mode, a reference to a this value of null or undefined is automatically coerced to the global. This can cause many headfakes and pull-out-your-hair kind of bugs. In strict mode, referencing a a this value of null or undefined throws an error.
+- Disallows duplicate parameter values.
+  Strict mode throws an error when it detects a duplicate named argument for a function (e.g., function foo(val1, val2, val1){}), thereby catching what is almost certainly a bug in your code that you might otherwise have wasted lots of time tracking down.
+  Note: It used to be (in ECMAScript 5) that strict mode would disallow duplicate property names (e.g. var object = {foo: "bar", foo: "baz"};) but as of ECMAScript 2015 this is no longer the case.
+- Makes eval() safer.
+  There are some differences in the way eval() behaves in strict mode and in non-strict mode. Most significantly, in strict mode, variables and functions declared inside of an eval() statement are not created in the containing scope (they are created in the containing scope in non-strict mode, which can also be a common source of problems).
+- Throws error on invalid usage of delete.
+  The delete operator (used to remove properties from objects) cannot be used on non-configurable properties of the object. Non-strict code will fail silently when an attempt is made to delete a non-configurable property, whereas strict mode will throw an error in such a case.
 
 # What will the code below output? Explain your answer.
 
@@ -1382,7 +1393,7 @@ Explain how JSONP works (and how it’s not really Ajax).
     A typical solution is to compare the absolute difference between two numbers with the special constant Number.EPSILON
 
             function areTheNumbersAlmostEqual(num1, num2) {
-	        return Math.abs( num1 - num2 ) < Number.EPSILON;
+            return Math.abs( num1 - num2 ) < Number.EPSILON;
         }
         console.log(areTheNumbersAlmostEqual(0.1 + 0.2, 0.3));
 
@@ -1539,7 +1550,7 @@ Explain how JSONP works (and how it’s not really Ajax).
                 } catch (x) {
                     var x = 1, y = 2;
                     console.log(x);
-                }   
+                }
                 console.log(x);
                 console.log(y);
             })();
@@ -1565,13 +1576,11 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # What is the value of typeof undefined == typeof NULL?
 
-
     The expression will be evaluated to true, since NULL will be treated as any other undefined variable.
 
     Note: JavaScript is case-sensitive and here we are using NULL instead of null.
 
 # What is NaN? What is its type? How can you reliably test if a value is equal to NaN?
-
 
     The NaN property represents a value that is “not a number”. This special value results from an operation that could not be performed either because one of the operands was non-numeric (e.g., "abc" / 4), or because the result of the operation is non-numeric.
 
@@ -1587,10 +1596,10 @@ Explain how JSONP works (and how it’s not really Ajax).
     A semi-reliable way to test whether a number is equal to NaN is with the built-in function isNaN(), but even using isNaN() is an imperfect solution.
 
     Why because isNaN(x) attempts to convert the passed parameter to a number1 (equivalent to Number(x) ) and then tests if the value is NaN . So you now know why isNaN() and isNaN({a: 1}) are both true even though isNaN([]) is false. Even though arrays are objects, their toNumber coercion is not NaN (as shown in the table above). Similarly since the boolean primitives coerce to numbers; calling isNaN(true) or isNaN(false) will give a false outcome. ( special case null which result false in both cases)
-    
+
     A better solution would either be to use value !== value, which would only produce true if the value is equal to NaN. Also, ES6 offers a new Number.isNaN() function, which is a different and more reliable than the old global isNaN() function.
 
-  **isNaN() will give true for objects also but Number.isNaN() strictly gives true only when is NaN**
+**isNaN() will give true for objects also but Number.isNaN() strictly gives true only when is NaN**
 
 # What will the following code output and why?
 
@@ -1627,7 +1636,7 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     With that in mind, the simplest and cleanest pre-ECMAScript-6 solution (which is also sufficiently robust to return false even if a non-numeric value such as a string or null is passed to the function) would be the following use of the bitwise XOR operator:
 
-    function isInteger(x) { return (x ^ 0) === x; } 
+    function isInteger(x) { return (x ^ 0) === x; }
     The following solution would also work, although not as elegant as the one above:
 
     function isInteger(x) { return (typeof x === 'number') && (x % 1 === 0); }
@@ -1831,12 +1840,12 @@ Explain how JSONP works (and how it’s not really Ajax).
 
     Decorators are just a wrapper around a function. They are used to enhance the functionality of the function without modifying the underlying function. Decorators are not a new concept — they have already been used by developers of Python and C#, and even JavaScript developers have been implementing them since forever. What? Yes, you heard it right.
 
-
 # what are primitive types ?
 
     primitive types are string , boolean , number whenevr u reassign them they will copy by values not by references
 
 # what are reference types ?
+
     array & object are reference type so when we reassign them it will have copy the reference
 
 # spread & rest operator ?
@@ -1849,96 +1858,109 @@ Explain how JSONP works (and how it’s not really Ajax).
 
 # With ES7 , how we can assign property & methods in classes
 
-    we can add property to class directly and also method as function value to property 
+    we can add property to class directly and also method as function value to property
 
     Ex :-  class person {
                 name = 'prani'
                 getName = () =>{
-                    return this.name 
+                    return this.name
                 }
             }
-	    
-# Can we declare variable twice with same name ?
-   Yes , using var declartion , we can declare 
 
-   ```javascript
-        var carName = "Volvo";
-        var carName;
-   ```
-   You cannot re-declare a variable declared with let or const.
+
+# Can we declare variable twice with same name ?
+
+Yes , using var declartion , we can declare
+
+```javascript
+var carName = "Volvo";
+var carName;
+```
+
+You cannot re-declare a variable declared with let or const.
 
     This will not work:
-    
+
     ```javascript
         let carName = "Volvo";
         let carName;
     ```
+
 # Output of null == undefined ?
-   It will be true because as type coercion happens , both will be converted to boolean type
-   
+
+It will be true because as type coercion happens , both will be converted to boolean type
+
 # Output of below snippet ?
-   ```javascript
+
+```javascript
 	for(var i=0;i<3;i++){
 	setTimeout(function(){
 	console.log(i)
 	},1000)
 ```
-  This prints 3 3 3 -- As setTimeout run after sometime due to webAPI asynchronous call . By that time i becomes 3 at the end so it prints 3 for each loop since var is a functional scope
-  
-  Important to remember like i will be increatment until condition fails so it increments to 3
-  
-  # Change below snippet using ES5 to print 0 1 2 ?
-   ```javascript
-	for(var i=0;i<3;i++){
-		setTimeout(function(){
-		console.log(i)
-		},1000)  
-	}
-```
-Ans
+
+This prints 3 3 3 -- As setTimeout run after sometime due to webAPI asynchronous call . By that time i becomes 3 at the end so it prints 3 for each loop since var is a functional scope
+
+Important to remember like i will be increatment until condition fails so it increments to 3
+
+# Change below snippet using ES5 to print 0 1 2 ?
+
 ```javascript
-  for(var i=0;i<3;i++){
-    (function (a){
-    	setTimeout(function(){
-		console.log(a)
-	},1000)
-    }
-    )(i)
-   }
-  ```
+for (var i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000);
+}
+```
+
+Ans
+
+```javascript
+for (var i = 0; i < 3; i++) {
+  (function (a) {
+    setTimeout(function () {
+      console.log(a);
+    }, 1000);
+  })(i);
+}
+```
 
 # What is method chaining ?
+
     Method chaining is the mechanism of calling a method on another method of the same object. This ensures a cleaner and readable code. Method chaining uses this keyword in the object's class to access its methods. In javascript, the this keyword refers to the current object in which it is called. When a method returns this, it simply returns an instance of the object in which it is returned. in another word, to chain methods together, we need to make sure that each method we define has a return value so that we can call another method on it.
 
     ```javascript
- class Arithmetic {
-  constructor() {
-    this.value = 0;
-  }
-  sum(...args) {
-    this.value = args.reduce((sum, current) => sum + current, 0);
-    return this;
-  }
-  addition(value) {
-    this.value = this.value + value;
-    return this;
-  }
-  subtraction(value) {
-    this.value = this.value - value;
-    return this;
-  }
-  average(...args) {
-    this.value = args.length? (this.sum(...args).value) / 
-  args.length: undefined;
-    return this;
-  }
-}
 
+class Arithmetic {
+constructor() {
+this.value = 0;
+}
+sum(...args) {
+this.value = args.reduce((sum, current) => sum + current, 0);
+return this;
+}
+addition(value) {
+this.value = this.value + value;
+return this;
+}
+subtraction(value) {
+this.value = this.value - value;
+return this;
+}
+average(...args) {
+this.value = args.length? (this.sum(...args).value) /
+args.length: undefined;
+return this;
+}
+}
 
 const Arithmetic 1= new Arithmetic()
 Arithmetic1
-  .sum(1, 3, 6)   // => { value: 10 } 
-  .subtract(3)   // => { value: 7 }
-  .add(4)        // => { value: 11 }
-  .value         // => 11 
-  ```
+.sum(1, 3, 6) // => { value: 10 }
+.subtract(3) // => { value: 7 }
+.add(4) // => { value: 11 }
+.value // => 11
+
+```
+
+```

@@ -52,6 +52,7 @@ log(); // prints "Count is 0" because string is already assigned to message befo
 ```javascript
 // Print an array which contains all the elemnts which are not present in input array within bound range
 let f = [7, 3, 8, 6, 1, 9, 5];
+let range = 10;
 
 const missingNumberInbound = (input, range) => {
   let hash = {};
